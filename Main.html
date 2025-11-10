@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Robux Tax Calculator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <!-- Nav bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Hamburger menu -->
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="#">Robux Tax Calculator</a></li>
+                <li><a href="#">More Projects</a></li>
+                <li><a class="Contact" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="Desc">
+        <h2>How to use</h2>
+        <p>
+        The <strong>Robux Tax Calculator</strong> helps you figure out how much Robux you actually get after Roblox takes its cut from things like game passes, shirts, or other items you sell. <br><br>
+
+        There are two modes you can choose from: <strong>Before Taxes</strong> and <strong>After Taxes</strong>. <br><br>
+
+        <strong>Before Taxes</strong> tells you how much you should price your item for if you want to earn a specific amount after Roblox’s tax. <br><br>
+
+        <strong>After Taxes</strong> shows how much Robux you’ll actually receive if your item is priced at the amount you entered. 
+        </p>
+    </div>
+
+
+    <div class="calculator-Container">
+        <h1>Robux Tax Calculator</h1>
+        <div class="Buttons">
+            <button class="BeforeTaxButton">Before Tax</button>
+            <button class="AfterTaxButton">After Tax</button>
+        </div>
+        <div class="TextBox">
+            <input type="number" id="fname" name="fname" placeholder="Insert Amount" max="999999999" min="0" oninput="if(this.value.length > 9) this.value = this.value.slice(0,9);">
+        </div>
+        <div class="DisplayCalculatedRobux">
+            <h1 class="TextRobuxTitle">You would get:</h1>
+            <div class="Amout">
+                <p>0 Robux</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="copyrightfooter">
+        <div class="topFooter">
+            <div class="usefulLinks">
+                <h1>Useful Links</h1>
+                <ul class="list">
+                    <li><a href="https://x.com/HepkaRblx" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg></a></li>
+                    <li><a href="https://www.roblox.com/users/59413614/profile" target="_blank"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="Roblox--Streamline-Simple-Icons" height="24" width="24">
+                    <path d="M18.926 23.998 0 18.892 5.075 0.002 24 5.108ZM15.348 10.09l-5.282 -1.453 -1.414 5.273 5.282 1.453z" fill="#ffffff" stroke-width="1"></path>
+                    </svg></a></li>
+                    <li><a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-discord"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14.983 3l.123 .006c2.014 .214 3.527 .672 4.966 1.673a1 1 0 0 1 .371 .488c1.876 5.315 2.373 9.987 1.451 12.28c-1.003 2.005 -2.606 3.553 -4.394 3.553c-.732 0 -1.693 -.968 -2.328 -2.045a21.512 21.512 0 0 0 2.103 -.493a1 1 0 1 0 -.55 -1.924c-3.32 .95 -6.13 .95 -9.45 0a1 1 0 0 0 -.55 1.924c.717 .204 1.416 .37 2.103 .494c-.635 1.075 -1.596 2.044 -2.328 2.044c-1.788 0 -3.391 -1.548 -4.428 -3.629c-.888 -2.217 -.39 -6.89 1.485 -12.204a1 1 0 0 1 .371 -.488c1.439 -1.001 2.952 -1.459 4.966 -1.673a1 1 0 0 1 .935 .435l.063 .107l.651 1.285l.137 -.016a12.97 12.97 0 0 1 2.643 0l.134 .016l.65 -1.284a1 1 0 0 1 .754 -.54l.122 -.009zm-5.983 7a2 2 0 0 0 -1.977 1.697l-.018 .154l-.005 .149l.005 .15a2 2 0 1 0 1.995 -2.15zm6 0a2 2 0 0 0 -1.977 1.697l-.018 .154l-.005 .149l.005 .15a2 2 0 1 0 1.995 -2.15z" /></svg></a></li>
+                </ul>
+            </div>
+
+            <div class="contactInfo">
+                <h1>Contact Information</h1>
+                <h2>Gmail</h2>
+                <p>hepkastudios@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="copyTXT">
+            <p>&copy; 2025 Robux Tax Calculator. All rights reserved <br>
+            <span>website by Egon</span></p>
+        </div>
+    </div>
+
+
+
+    <script src="Script.js"></script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    font-family: "Inter", sans-serif;
+}
+
+/* Nav Bar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.507);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(5px);
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+}
+
+.navbar:hover {
+    background-color: rgba(0, 0, 0, 0.605);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    display: block;
+    text-align: center;
+    color: rgb(219, 219, 219);
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: color 0.3s;
+}
+
+.Contact {
+    position: relative;
+    background-color: #008cff;
+    border-radius: 15px;
+    width: 150px;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.Contact::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 25px;
+    background-color: #008cff;
+    opacity: 0;
+    filter: blur(15px);
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.Contact:hover::after {
+    opacity: 0.6;
+}
+
+
+
+
+
+.nav-list a:hover {
+    color: #ffffff;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(11px, 5px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(11px, -5px);
+}
+
+@media (max-width: 600px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .LiveCount-center {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Desc {
+    margin-top:100px ;
+    background-color: rgb(57, 126, 254);
+    color: white;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin-bottom: 30px;
+
+}
+.Desc h2 {
+    padding-top: 10px;
+    text-decoration: solid, black;
+}
+
+.Desc p {
+    padding: 10px;
+}
+
+.calculator-Container {
+    background-color: rgb(0, 0, 0);
+    margin: 40px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    height: 500px;
+    width: 400px;
+    border-radius: 30px;
+    border: 2px solid rgb(0, 145, 255);
+    gap: 20px;
+}
+
+.calculator-Container h1 {
+    color: white;
+    border-bottom: 2px solid rgb(0, 145, 255);
+}
+
+.Buttons button {
+    background-color: rgb(0, 145, 255);
+    color: white;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    transition: transform 0.2s;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.Buttons button:hover {
+    transform: scale(1.05);
+    background-color: rgb(37, 158, 251);
+}
+
+.TextBox input {
+    background-color: rgba(20, 20, 20, 0.384);
+    font-family: "Inter", sans-serif;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px;
+    height: 45px;
+}
+
+.TextBox input::placeholder {
+    color: rgba(255, 255, 255, 0.495);
+}
+
+.TextBox input[type=number]::-webkit-inner-spin-button,
+.TextBox input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.TextBox input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.DisplayCalculatedRobux {
+    background-color: rgba(24, 24, 24, 0.315);
+    width: 80%;
+    height: 200px;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+
+.DisplayCalculatedRobux h1 {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.DisplayCalculatedRobux p {
+    padding: 30px;
+    font-size: 18px;
+}
+
+/* Footer container */
+.copyrightfooter {
+    border-top: 2px solid rgb(37, 158, 251);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    margin-top: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+
+.topFooter {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    padding-left:20px ;
+    padding-right: 20px;
+}
+
+.usefulLinks, .contactInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.usefulLinks h1, .contactInfo h1 {
+    margin-bottom: 10px;
+}
+
+.usefulLinks ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    gap: 10px;
+}
+
+.usefulLinks ul li {
+    margin-bottom: 5px;
+}
+
+.usefulLinks a {
+    color: white;
+    text-decoration: none;
+}
+
+.contactInfo h2 {
+    margin-bottom: 5px;
+}
+
+.copyTXT p {
+    color: rgba(255, 255, 255, 0.65);
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 0px;
+}
+
